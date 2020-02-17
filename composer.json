@@ -2,6 +2,6 @@
     "require": {
 		"php": "^7.1",
         "erusev/parsedown": "^1.7",
-		"hell-sh/pac": "dev-master"
+		"hell-sh/chromium": "dev-master"
     }
 }
