@@ -17,10 +17,10 @@ if(!is_file(__DIR__."/vendor/autoload.php"))
 	}
 }
 require __DIR__."/vendor/autoload.php";
-use pac\
+use Chromium\
 {Chromium, Page};
-use pas\
-{pas, stdin};
+use Asyncore\
+{Asyncore, stdin};
 
 $output = join(".", array_slice(array_reverse(explode(".", $argv[1])), 1)).".png";
 if(is_file($output))
@@ -65,4 +65,4 @@ $i->newPage(function(Page $page)
 		});
 	})->setDocumentContent("<style>".file_get_contents(__DIR__."/assets/Caret.css")."</style>".(new Parsedown())->text(file_get_contents($argv[1])));
 });
-pas::loop();
+Asyncore::loop();
